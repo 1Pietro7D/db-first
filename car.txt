@@ -1,0 +1,40 @@
+CREATE TABLE cars (
+
+    car_id INT AUTO_INCREMENT PRIMARY_KEY UNIQUE NOTNULL,
+    vin --rel-- VARCHAR(17)
+    cilindrata SMALLINTEGER NOTNULL,
+    alimentazione VARCHAR(100) NOTNULL, 
+    potenza-kW FLOAT(5,2) NOTNULL,
+    trazione VARCHAR(100), 
+    velocità FLOAT(5,2) NULL,
+    accelerazione FLOAT(3,1), NULL <!-- spero che in 99sec raggiunga i 100kh XD e se non li raggiunge proprio?? -->
+    tipo-cambio VARCHAR(255),
+    omologazione(EURO) VARCHAR(5),
+    codice infocar,
+    periodo commercializzazione,
+    carrozzeria VARCHAR(155),
+    n.porte INT NOTNULL,
+    n.posti INT NOTNULL,
+    motore VARCHAR(255) NOTNULL, 
+    coppia-max FLOAT(5,2) NULL,
+    cap.bagagliaio FLOAT(10,2) NULL,
+    cap.serbatoio FLOAT(10,2) NULL,
+    peso-massa-a-vuoto FLOAT(10,2) NULL,
+    lunghezza FLOAT(4,2) NULL, 
+    altezza FLOAT(3,2) NULL, <!-- se supera i 10metri non stai proprio vendendo un'auto XD -->
+    larghezza FLOAT(3,2) NULL, 
+    
+);
+
+CREATE TABLE on-sale (
+    id_sell INT AUTO_INCREMENT PRIMARY_KEY UNIQUE NOTNULL,
+    id_auto --rel-- NOT_NULL
+    vin --rel-- VARCHAR(17)
+    prezzo MEDIUMINT NOT_NULL
+    km_Percorsi MEDIUMINT NULL
+    targa varchar(7)
+    colore VARCHAR(32) NOT_NULL
+    arrivo_concessionaria DATE
+
+)
+
